@@ -38,22 +38,10 @@ namespace Classes
                 {
                     Console.WriteLine("Number is not within the boundaries. Press any Key to continue");
                     Console.ReadKey();
+                    Console.Clear();
                     StartingNumber();
                 }
-                else
-                {
-                    for(int i = 0; i < startnum.Length - 1; i++) 
-                    { 
-                        char cha = startnum[i];
-                        int c = (int)cha;
-                        if (c < 48 || c > 57)
-                        {
-                            Console.WriteLine("That is not a proper number. Press any key to continue");
-                            Console.ReadKey();
-                            StartingNumber();
-                        }
-                    }
-                }
+
             }
             return startnum;
         }
@@ -68,10 +56,7 @@ namespace Classes
             }
             catch (FormatException)
             {
-                Console.WriteLine($"{startnum} is not a number. Press any key to retry");
-                Console.ReadKey();
                 Console.Clear();
-                StartingNumber();
             }
 
             Console.Clear();
